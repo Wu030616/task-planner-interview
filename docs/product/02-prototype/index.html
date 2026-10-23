@@ -236,7 +236,7 @@
     el("historyTitle").textContent = "历史日程（共 " + items.length + " 份）";
     el("historyList").innerHTML = items.map(function (it, i) {
       var open = s.expandHistory && i === 0;
-      return '<div class="item"><span>' + it.at + ' <span class="meta">· ' + it.tasks + ' 个任务 · ' + it.hours + ' 小时</span></span>' +
+      return '<div class="item"><span>' + it.at + ' <span class="meta">· ' + it.tasks + ' 个任务</span></span>' +
         '<button class="btn ghost">' + (open ? "收起" : "查看") + '</button></div>' +
         (open ? '<div class="detail"><div class="sched">' + scheduleCards(it.hours, TASKS) + '</div></div>' : "");
     }).join("");
